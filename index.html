@@ -284,8 +284,6 @@
                 min-height: 40vh;
                 width: 90%;
                 object-fit: fill;
-
-                /* object-fit: contain; */
                 object-position: center;
 
             }
@@ -321,12 +319,6 @@
 
 
             }
-
-
-
-            /* body,*{
-            font-size:3vw;
-        } */
             #navbar {
 
                 align-items: flex-start;
@@ -435,6 +427,13 @@
             object-position: center;
 
         }
+        .blur{
+            height: 10vh;
+            width: 100%;
+            background-color: rgba(rgb(255, 255, 255), rgb(255, 0, 0), rgb(255, 255, 255), 2);
+
+            
+        }
 
         .repapa {
 
@@ -450,7 +449,7 @@
             display: none;
             justify-content: center;
             align-items: center;
-            position:absolute;
+            /* position:absolute; */
 
            
 
@@ -536,7 +535,7 @@
 
 <body>
     <img src="pic4.png" alt="error" class="imghero">
-
+    <div class="blur"></div>
     <div id="navbar">
         <span>Samaya</span>
         <div id="menu">
@@ -549,7 +548,7 @@
     </div>
 
     <div class="hello_msg">
-        <h1>welcome to Digital Clock</h1>
+        <h1 style="font-size: 2rem;">Welcome to Digital Clock</h1>
         <h4>login to See content !!!</h4>
         <i class="fa-solid fa-user-lock"></i>
     </div>
