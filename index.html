@@ -322,12 +322,13 @@
             cursor: pointer;
             transition: background 0.1s;
         }
+
         .imghero {
             margin-top: 4vh;
-    /* background-color: #c3bba2; */
-    width: 114vh;
-    object-position: center;
-    object-fit: contain;
+            /* background-color: #c3bba2; */
+            width: 114vh;
+            object-position: center;
+            object-fit: contain;
 
         }
 
@@ -335,7 +336,7 @@
             .imghero {
                 margin-top: 6vh;
                 /* background-color: #856404; */
-                width:55vh;
+                width: 55vh;
                 background-color: transparent;
 
                 height: 40vh;
@@ -435,11 +436,10 @@
                 position: relative;
                 z-index: 100;
                 overflow: hidden;
-                
+
             }
-            /* #register{
-                transform-origin: 60% 50%;
-            } */
+
+            #register {}
 
 
 
@@ -449,7 +449,7 @@
         }
 
         @media(min-width:730px) {
-            
+
             .hello_msg {
                 display: flex;
                 justify-items: center;
@@ -458,7 +458,7 @@
                 /* font-size: 0.8rem; */
                 /* background-color: #0056b3; */
                 position: relative;
-                top: -70vh;              
+                top: -70vh;
 
 
             }
@@ -517,13 +517,13 @@
 
         @media (max-width: 730px) {
             .imghero {
-                margin-top: -16vh;                
-                width:65vh;
+                margin-top: -16vh;
+                width: 65vh;
                 height: 50vh;
                 object-position: center;
                 object-fit: cover;
                 background-color: transparent;
-                
+
                 object-position: center;
 
 
@@ -590,17 +590,17 @@
 
         #login {
             background: #ffffff;
-    border: 2px solid #e5e5e5;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 403px;
-    width: 80%;
-    margin: auto;
-    display: none;
-    position: relative;
-    top: -10vh;
-    z-index: 100;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 403px;
+            width: 80%;
+            margin: auto;
+            display: none;
+            position: relative;
+            top: -10vh;
+            z-index: 100;
         }
 
         #register {
@@ -609,8 +609,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            max-width: 400px;
-            width: 50%;
+            max-width: 450px;
+            width: 80%;
             margin: auto;
             /* margin: auto; */
             display: none;
@@ -623,7 +623,7 @@
             background: url(pic2.jpg);
             background-position: center;
             height: 50vh;
-            width: 50%;
+            /* width: 50%; */
             background-size: contain;
             background-repeat: no-repeat;
             padding: 20px;
@@ -672,13 +672,22 @@
             border: 2px solid #e5e5e5;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 14px;
             max-width: 400px;
-            width: 50%;
+            padding-left: 32px;
+            width: 95%;
             margin: auto;
             display: none;
             position: relative;
             top: 7vh;
+        }
+
+        #registerForm {
+            width: 90%;
+
+            /* align-items: ; */
+            max-width: 400px;
+
         }
     </style>
     <!-- 
@@ -811,7 +820,7 @@
             </form>
 
         </div>
-        <div class="pic"></div>
+        <!-- <div class="pic"></div> -->
     </div>
 
 
