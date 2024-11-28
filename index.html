@@ -692,70 +692,51 @@
             max-width: 400px;
 
         }
-    </style>
-    <!-- 
-    <style>
-        #login {
-            border: 2px solid black;
-            position: relative;
-            display: none;
-
-        }
-
-        #register {
-            border: 2px solid black;
-            position: relative;
-            display: none;
-            /* display: block; */
-        }
-
-        .xbtn {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        #navbar {
-            display: flex;
-            justify-content: space-evenly;
-
-        }
-
-        #menu {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .pointer {
+        .btn{
+            background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
+            transition: background 0.1s;
         }
 
-        .container {
-            display: none;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            align-content: center;
+        .btn:hover {
+            background: linear-gradient(to right, #434343 0%, black 100%);
+            transform: scale(1.1);
         }
-
-        .alert {
-
-            border: 2px solid black;
-            display: inline-block;
-            padding: 5px;
-
-
-        }
-
-        .alertPapa {
-            display: none;
+        #welcomeMessage{
+            display: flex;
+            flex-direction: column
             ;
+            height: auto;
+            padding: 20px;
         }
-    </style> -->
+        #welcomeMessage h1{
+            margin: 5px;
+
+        }
+        #welcomeMessage h3{
+            margin: 10px;
+            align-items: center
+            ;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    
 
 </head>
 
 <body>
+    <!-- <button class="btn">Go to Dashboard</button> -->
+    <!-- <div id="welcomeMessage">
+        <h1>Welcome, <span id="user">${username}</span>! 😊</h1>
+        <h3>We're happy to have you here!</h3>
+        <button id="goToDashboard" class="btn" onclick="showContent()">Go to Dashboard</button>
+    </div> -->
     <div class="blur"></div>
     <div id="navbar">
         <span>Samaya</span>
@@ -850,18 +831,18 @@
     const hello_msg = document.getElementsByClassName("hello_msg")[0];
     const imghero = document.getElementsByClassName("imghero")[0];
     const repapa = document.getElementsByClassName("repapa")[0];
-    const h4=document.getElementsByClassName("h4")[0];
+    const h4 = document.getElementsByClassName("h4")[0];
     document.addEventListener("DOMContentLoaded", () => {
-            const h4 = document.getElementById("loginAlert");
-            h4.addEventListener("click", () => {
-                alert("Please login to See the content :)");
-            });
-        });
-
-        // Alternatively, you can define the function directly
-        function loginAlert() {
+        const h4 = document.getElementById("loginAlert");
+        h4.addEventListener("click", () => {
             alert("Please login to See the content :)");
-        }
+        });
+    });
+
+    // Alternatively, you can define the function directly
+    function loginAlert() {
+        alert("Please login to See the content :)");
+    }
     let islogin = false;
     let lock = true;
     let found = false;   // use for finding people id pass if existed
@@ -1104,6 +1085,7 @@
 
 
     function openlogin() {
+        repapa.style.display = "none";
         islogin = true;
         navbtn.innerText = "Register";
         loginBox.style.display = "block";
@@ -1138,15 +1120,23 @@
 
 
 
+
     // ###################### Main Page ###########################################
 
     function openClock(username) {
         islogin = false;  // taki jese hi logout kru login page khule
         const h1 = document.createElement("h1");
-        const h2 = document.createElement("h1");
-        h2.innerText = "Login SuccessFull ";
+        const h2 = document.createElement("div");
+        h2.innerHTML = `
+        <div id="welcomeMessage">
+            <h1>Welcome, <span id="user">${username}</span>! 😊</h1>
+            <h3>We're happy to have you here!</h3>
+            <button id="goToDashboard" class="btn" onclick="showContent()">Go to Dashboard</button>
+        </div>
+    `;
         h1.innerText = username;
-        mainpage.append(h2, h1);
+        // mainpage.append(h2, h1);
+        mainpage.append(h2);
         mainpage.style.display = "block";
         hello_msg.style.display = "none";
         papa.style.display = "none";
@@ -1162,7 +1152,9 @@
 
 
     }
-
+    function showContent() {
+        alert("content Will be Ready Soon;) Stay Turn");
+    }
 
 </script>
 
