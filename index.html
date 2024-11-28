@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baumans&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Passero+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baumans&family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Passero+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Baumans&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap"
         rel="stylesheet">
@@ -137,33 +148,6 @@
             transform: scale(1.1);
         }
 
-        .hello_msg {
-            text-align: center;
-            margin-top: 50px;
-
-            background-color: transparent;
-            z-index: 1000;
-            position: relative;
-
-
-            top: -300px;
-
-
-        }
-
-        .hello_msg h1 {
-            font-size: 2rem;
-            color: #444;
-
-
-        }
-
-        .hello_msg h4 {
-            font-size: 1.2rem;
-            color: #666;
-
-
-        }
 
         .container {
             display: none;
@@ -264,7 +248,7 @@
         .alert {
             border: 2px solid #333;
             background: #fff3cd;
-            color: #856404;
+            /* color: #856404; */
             padding: 10px;
             border-radius: 5px;
             font-size: 0.9rem;
@@ -276,17 +260,165 @@
             text-align: center;
         }
 
-        /* Responsive Design */
-        @media (max-width: 500px) {
+        .hello_msg {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+            /* font-size: 0.8rem; */
+            /* background-color: #0056b3; */
+            position: relative;
+            /* top: -55vh; */
+
+
+        }
+
+        .hello_msg .h1 {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            font-size: 1.4rem;
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        .hello_msg .h4 i {
+            font-size: 1.4rem;
+            position: absolute;
+            top: -4vh;
+            margin-left: 1vh;
+            right: 4vh;
+        }
+
+        .hello_msg .h4:hover {
+            background: linear-gradient(to right, #434343 0%, black 100%);
+            transform: scale(0.91);
+        }
+
+        .hello_msg .h4 {
+
+            background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+            color: white;
+            border: none;
+            width: 89%;
+            position: relative;
+            /* top: 50vh; */
+
+            height: 7vh;
+            transition: 0.8sec;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+
+
+
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: .85rem;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+        .imghero {
+            margin-top: 4vh;
+    /* background-color: #c3bba2; */
+    width: 114vh;
+    object-position: center;
+    object-fit: contain;
+
+        }
+
+        @media (max-width: 300px) {
             .imghero {
+                margin-top: 6vh;
+                /* background-color: #856404; */
+                width:55vh;
+                background-color: transparent;
+
+                height: 40vh;
+                object-position: center;
+                object-fit: contain;
+                /* object-fit: fill; */
+                object-position: center;
+
+
+            }
+
+            .hello_msg {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                flex-direction: column;
+                /* font-size: 0.8rem; */
+                /* background-color: #0056b3; */
                 position: relative;
-                top: 28vh;
-                min-height: 40vh;
-                width: 90%;
+                top: -55vh;
+
+
+            }
+
+            .hello_msg .h1 {
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                font-size: 1.4rem;
+                font-family: "Protest Revolution", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+            }
+
+            .hello_msg .h4 i {
+                font-size: 1.4rem;
+                position: absolute;
+                top: -4vh;
+                margin-left: 1vh;
+                right: 4vh;
+            }
+
+            .hello_msg .h4:hover {
+                background: linear-gradient(to right, #434343 0%, black 100%);
+                transform: scale(0.91);
+            }
+
+            .hello_msg .h4 {
+
+                background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+                color: white;
+                border: none;
+                width: 89%;
+                position: relative;
+                top: 50vh;
+
+                height: 7vh;
+                transition: 0.8sec;
+                display: flex;
+                position: relative;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+
+
+
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: .85rem;
+                cursor: pointer;
+                transition: background 0.1s;
+            }
+
+            /* .imghero {
+                position: relative;
+                top: -4vh;
+                height: 40vh;
+                width: 100%;
                 object-fit: fill;
                 object-position: center;
 
-            }
+            } */
 
             #login,
             #register {
@@ -302,7 +434,13 @@
                 display: none;
                 position: relative;
                 z-index: 100;
+                overflow: hidden;
+                
             }
+            /* #register{
+                transform-origin: 60% 50%;
+            } */
+
 
 
 
@@ -310,7 +448,86 @@
 
         }
 
+        @media(min-width:730px) {
+            
+            .hello_msg {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                flex-direction: column;
+                /* font-size: 0.8rem; */
+                /* background-color: #0056b3; */
+                position: relative;
+                top: -70vh;              
+
+
+            }
+
+            .hello_msg .h1 {
+                display: none;
+                /* display: flex; */
+                justify-content: center;
+                padding: 10px;
+                font-size: 1.4rem;
+                font-family: "Protest Revolution", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+            }
+
+            .hello_msg .h4 i {
+                font-size: 1.4rem;
+                position: absolute;
+                top: -4vh;
+                margin-left: 1vh;
+                right: 4vh;
+            }
+
+            .hello_msg .h4:hover {
+                background: linear-gradient(to right, #434343 0%, black 100%);
+                transform: scale(0.91);
+            }
+
+            .hello_msg .h4 {
+
+                background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+                color: white;
+                border: none;
+                width: 40vh;
+
+                height: 7vh;
+                transition: 0.8sec;
+                display: flex;
+                position: relative;
+                top: 10vh;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+
+
+
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: .85rem;
+                cursor: pointer;
+                transition: background 0.1s;
+            }
+
+        }
+
         @media (max-width: 730px) {
+            .imghero {
+                margin-top: -16vh;                
+                width:65vh;
+                height: 50vh;
+                object-position: center;
+                object-fit: cover;
+                background-color: transparent;
+                
+                object-position: center;
+
+
+            }
 
             i {
                 font-size: 5vw;
@@ -319,6 +536,7 @@
 
 
             }
+
             #navbar {
 
                 align-items: flex-start;
@@ -372,17 +590,17 @@
 
         #login {
             background: #ffffff;
-            border: 2px solid #e5e5e5;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 400px;
-            width: 50%;
-            margin: auto;
-            display: none;
-            position: relative;
-            z-index: 100;
-
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 403px;
+    width: 80%;
+    margin: auto;
+    display: none;
+    position: relative;
+    top: -10vh;
+    z-index: 100;
         }
 
         #register {
@@ -397,7 +615,7 @@
             /* margin: auto; */
             display: none;
             position: relative;
-           
+
         }
 
         .pic {
@@ -418,21 +636,21 @@
 
         }
 
-        .imghero {
-            margin-top: 10vh;
-
-            min-height: 40vh;
-            width: 70%;
-            object-fit: contain;
+        /* .imghero {
+            margin-top: 6vh;
+            background-color: #856404;
+            width: 55%;
             object-position: center;
+            object-fit: contain;
 
-        }
-        .blur{
+        } */
+
+        .blur {
             height: 10vh;
             width: 100%;
             background-color: rgba(rgb(255, 255, 255), rgb(255, 0, 0), rgb(255, 255, 255), 2);
 
-            
+
         }
 
         .repapa {
@@ -440,8 +658,6 @@
             height: auto;
             background: linear-gradient(70.6deg, rgb(172, 30, 255) 0.3%, rgb(65, 35, 251) 55.8%, rgb(35, 251, 224) 105.1%);
             width: 100%;
-            /* display: none;
-            display: none; */
             height: 100vh;
             justify-content: center;
             width: 100%;
@@ -449,12 +665,6 @@
             display: none;
             justify-content: center;
             align-items: center;
-            /* position:absolute; */
-
-           
-
-
-
         }
 
         #register {
@@ -467,7 +677,7 @@
             width: 50%;
             margin: auto;
             display: none;
-            position: relative; 
+            position: relative;
             top: 7vh;
         }
     </style>
@@ -534,7 +744,6 @@
 </head>
 
 <body>
-    <img src="pic4.png" alt="error" class="imghero">
     <div class="blur"></div>
     <div id="navbar">
         <span>Samaya</span>
@@ -547,10 +756,11 @@
         <button id="navbtn">Login</button>
     </div>
 
+    <img src="pic4.png" alt="error" class="imghero">
     <div class="hello_msg">
-        <h1 style="font-size: 2rem;">Welcome to Digital Clock</h1>
-        <h4>login to See content !!!</h4>
-        <i class="fa-solid fa-user-lock"></i>
+        <div class="h1">Welcome to Digital Clock</div>
+        <div class="h4">login to See content <i class="fa-solid fa-user-lock"></i></div>
+
     </div>
 
 
@@ -580,7 +790,7 @@
         <div class="pic"></div>
 
     </div>
-    
+
     <div class="repapa">
         <div id="register">
             <button class="xbtn">X</button>
@@ -627,8 +837,8 @@
     const email = document.getElementById("Remail");
     const hello_msg = document.getElementsByClassName("hello_msg")[0];
     const imghero = document.getElementsByClassName("imghero")[0];
-    const repapa=document.getElementsByClassName("repapa")[0];
-    
+    const repapa = document.getElementsByClassName("repapa")[0];
+
     let islogin = false;
     let lock = true;
     let found = false;   // use for finding people id pass if existed
@@ -676,6 +886,8 @@
             papa.style.display = "none";
             imghero.style.display = "block";
             hello_msg.style.display = "block";
+            papa.style.display = "none";
+            repapa.style.display = "none";
 
         });
     });
@@ -895,7 +1107,7 @@
         mainpage.style.display = "none";
         papa.style.display = "none";
         imghero.style.display = "none";
-        repapa.style.display='block';
+        repapa.style.display = 'block';
 
 
 
@@ -914,8 +1126,8 @@
         mainpage.append(h2, h1);
         mainpage.style.display = "block";
         hello_msg.style.display = "none";
-        papa.style.display="none";
-        repapa.style.display="none";
+        papa.style.display = "none";
+        repapa.style.display = "none";
         loginBox.style.display = "none";
         navbtn.innerText = "Login Out";
         navbtn.addEventListener("click", () => {
